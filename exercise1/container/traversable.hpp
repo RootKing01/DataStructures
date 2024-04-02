@@ -61,7 +61,7 @@ public:
   //using TraverseFun = std::function<void(const Data &)>;
 
   // type Traverse(arguments) specifiers;
-  inline void Traverse(TraverseFun)
+  virtual inline void Traverse(TraverseFun)
   {
     //Da completare?
   }
@@ -82,9 +82,8 @@ public:
   // Specific member function (inherited from TestableContainer)
 
   // type Exists(argument) specifiers; // Override TestableContainer member
-  //here we need virtual because of the override on TestableContainer method
-
-  virtual inline bool Exists(Data& element)  //Come argomento vuole un Data di tipo Accumulator?
+  
+  override Exists(Data& element)  //Come argomento vuole un Data di tipo Accumulator?
   {
 
   }
@@ -159,7 +158,7 @@ public:
   // Specific member function (inherited from TraversableContainer)
 
   // type Traverse(arguments) specifiers; // Override TraversableContainer member
-  virtual inline Traverse(TraverseFun)
+  override Traverse(TraverseFun)
   {
 
   }
@@ -240,7 +239,7 @@ public:
 
   // type Traverse(arguments) specifiers; // Override TraversableContainer member
 
-  virtual inline Traverse() //Review this override 
+  override Traverse() //Review this override 
   {
 
   }
@@ -316,7 +315,7 @@ public:
 
   // type Traverse(arguments) specifiers; // Override TraversableContainer member
 
-  virtual inline void Traverse()
+  override Traverse()
   {
 
   }
@@ -388,7 +387,7 @@ public:
   // Specific member function (inherited from TraversableContainer)
 
   // type Traverse(arguments) specifiers; // Override TraversableContainer member
-  virtual inline void Traverse()
+  override Traverse()
   {
     
   }

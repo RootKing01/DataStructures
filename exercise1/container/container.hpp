@@ -3,6 +3,7 @@
 #define CONTAINER_HPP
 
 /* ************************************************************************** */
+#include <functional>
 
 namespace lasd {
 
@@ -102,7 +103,10 @@ public:
   // Specific member functions
 
   // type Clear() specifiers;
-  virtual void Clear() = 0;
+  virtual inline void Clear()
+  {
+
+  }  // = 0; //Not equal 0?
 
 };
 
@@ -153,7 +157,8 @@ public:
   // Specific member function (inherited from ClearableContainer)
 
   // type Clear() specifiers; // Override ClearableContainer member
-  void Clear()
+  
+  inline void  Clear() //doesn't work with override
   {
     ResizableContainer::containerSize = 0;
   }

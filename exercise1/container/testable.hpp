@@ -49,7 +49,7 @@ public:
   // Specific member function
 
   // type Exists(argument) specifiers; // (concrete function should not throw exceptions)
-  void inline bool Exists(Data element) const noexcept
+  virtual inline bool Exists(Data element) const noexcept
   {
     if !(element)
       return false;
